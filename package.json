@@ -1,0 +1,43 @@
+{
+  "name": "opencode-history-search-v2",
+  "version": "1.0.0",
+  "description": "OpenCode V2 plugin: search past conversation sessions by keyword, fuzzy term, multi-term AND, or file touch history. Local, read-only, no network.",
+  "type": "module",
+  "main": "index.ts",
+  "files": [
+    "index.ts",
+    "src/**/*.ts",
+    "!src/**/*.test.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "plugin",
+    "history",
+    "search",
+    "sqlite",
+    "memory"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marioschweiger/opencode-history-search-v2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marioschweiger/opencode-history-search-v2/issues"
+  },
+  "homepage": "https://github.com/marioschweiger/opencode-history-search-v2#readme",
+  "license": "MIT",
+  "peerDependencies": {
+    "@opencode/plugin": "^2.0.0"
+  },
+  "devDependencies": {
+    "@opencode/plugin": "^2.0.21",
+    "bun-types": "^1.4.2",
+    "typescript": "^5.9.0"
+  },
+  "dependencies": {
+    "fuse.js": "^7.1.0"
+  }
+}
