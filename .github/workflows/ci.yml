@@ -7,11 +7,10 @@ on:
 
 jobs:
   test:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest]  # macos-latest dropped: hosted macOS arm64 pool flaky/capacity-limited; code is platform-neutral (bun + node:sqlite)
+    # Single OS: the code is platform-neutral TypeScript (bun + node:sqlite).
+    # Linux is the strictest case (case-sensitive filesystem) and has the
+    # most reliable hosted runner pool.
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
