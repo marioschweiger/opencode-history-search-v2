@@ -11,7 +11,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest]  # macos-latest dropped: hosted macOS arm64 pool flaky/capacity-limited; code is platform-neutral (bun + node:sqlite)
     steps:
       - uses: actions/checkout@v4
 
